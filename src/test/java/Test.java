@@ -1,21 +1,21 @@
-import com.liang.pojo.User;
-import com.liang.utils.GsonUtil;
+import com.liang.pojo.Users;
+import com.liang.service.imp.UserImplementation;
+
+import java.util.List;
 
 /**
  * @author Beyond
  * @date 2022/11/14
  */
 public class Test {
-    GsonUtil gsonUtil = new GsonUtil();
+   UserImplementation userImplementation = new UserImplementation();
    static String string;
     @org.junit.Test
     public void userTest(){
-        User user = new User("456","789");
-         string = gsonUtil.beanToJson(user);
-        System.out.println(string);
-        gsonUtil.jsonToBean(string, User.class);
-        System.out.println(user.toString());
-        System.out.println(user.getName());
+//        int dcw = userImplementation.insertUser(2020590632  , "dcw1", "456");
+//        System.out.println(dcw);
+        List<Users> users = userImplementation.selectUser();
+        users.forEach(System.out::println);
     }
 
 }

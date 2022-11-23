@@ -10,5 +10,8 @@
         <module name="axios" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="axios" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
